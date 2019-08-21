@@ -9,7 +9,7 @@ import data from './data'
 
 function App() {
 
-  const [teamMembers, SetTeamMembers] = (data)
+  const [teamMembers, SetTeamMembers] = useState(data)
   const addNewTeamMember = teamMember => {
     SetTeamMembers([...teamMember, teamMember])
   }

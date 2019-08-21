@@ -18,7 +18,7 @@ const TeamForms = (props) =>{
         event.preventDefault();
         //Create a new Obj, include all properties from newMember State and add an id to it.
         const newTeamMember = {
-          ...NewMember,
+          ...newMember,
           id: uuid()
         };
         //Add the new team memember to state in app component
@@ -31,14 +31,14 @@ const TeamForms = (props) =>{
     return(
         <div>
             <h1>Team Forms</h1>
-            <form>
+            <form onSubmit={submitForm}>
                 <label htmlFor="name">Name</label>
                 <input
                     type="text"
                     name="name"
                     placeholder="First Name"
-                    value={newMember}
-                    onChange={ChangeHandler}
+                    value={newMember.name}
+                    onChange={changeHandler}
                 />
 
                 <label htmlFor="email">Email</label>
@@ -46,15 +46,16 @@ const TeamForms = (props) =>{
                     type="text"
                     name="email"
                     placeholder="email@email.com"
-                    value={newMember}
-                    onChange={ChangeHandler}
+                    value={newMember.email}
+                    onChange={changeHandler}
                 />
                 <label htmlFor="role">Role</label>
                 <select>
-                    <option value="">Frontend Designer</option>
-                    <option value="">Backend Designer</option>
-                    <option value="">Designer</option>
+                    <option value="{newMember.role}">Frontend Designer</option>
+                    <option value="{newMember.role}">Backend Designer</option>
+                    <option value="{newMember.role}">Designer</option>
                 </select>
+                <button type="submit">Enroll</button>
             </form>
         </div>
     )
