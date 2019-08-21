@@ -10,7 +10,8 @@ const TeamForms = (props) =>{
     });
     const changeHandler = event =>{
         console.log(event.target.value);
-        SetNewMember({ ...newMember, [event.target.name]: event.target.value});
+        SetNewMember({ ...newMember, 
+            [event.target.name]: event.target.value});
     }
     const submitForm = event => {
         //revent the default reload of a button click in a form
@@ -36,8 +37,8 @@ const TeamForms = (props) =>{
                     type="text"
                     name="name"
                     placeholder="First Name"
-                    //value
-                    //onChange={}
+                    value={newMember}
+                    onChange={ChangeHandler}
                 />
 
                 <label htmlFor="email">Email</label>
@@ -45,8 +46,8 @@ const TeamForms = (props) =>{
                     type="text"
                     name="email"
                     placeholder="email@email.com"
-                    //value
-                    //onChange={}
+                    value={newMember}
+                    onChange={ChangeHandler}
                 />
                 <label htmlFor="role">Role</label>
                 <select>
