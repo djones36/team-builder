@@ -33,7 +33,7 @@ const TeamForms = (props) =>{
         <div>
             <h1>Team Forms</h1>
             <form onSubmit={submitForm}>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Name: </label>
                 <input
                     type="text"
                     name="name"
@@ -42,7 +42,7 @@ const TeamForms = (props) =>{
                     onChange={changeHandler}
                 />
 
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email: </label>
                 <input 
                     type="text"
                     name="email"
@@ -50,7 +50,7 @@ const TeamForms = (props) =>{
                     value={newMember.email}
                     onChange={changeHandler}
                 />
-                <label htmlFor="role">Role</label>
+                <label htmlFor="role">Role: </label>
                 <input 
                     type="text"
                     name="role"

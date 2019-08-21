@@ -1,7 +1,7 @@
 export default [
     {
-        name: '',
-        email: '',
-        role: ''
+        name: 'Bill',
+        email: 'bill@gmail.com',
+        role: 'Front End'
     }
 ]
