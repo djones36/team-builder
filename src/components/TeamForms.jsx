@@ -7,7 +7,10 @@ const TeamForms = (props) =>{
         email: "",
         role: "",
     })
-
+    const changeHandler = event =>{
+        console.log(event.target.value);
+        SetNewMember({ ...newMember, [event.target.name]: event.target.value});
+    }
     const submitForm = event => {
         //revent the default reload of a button click in a form
         event.preventDefault();

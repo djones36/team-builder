@@ -10,7 +10,6 @@ import data from './data'
 function App() {
 
   const [teamMembers, SetTeamMembers] = (data)
-
   const addNewTeamMember = teamMember => {
     SetTeamMembers([...teamMember, teamMember])
   }
