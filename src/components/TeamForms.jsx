@@ -28,6 +28,7 @@ const TeamForms = (props) =>{
         SetNewMember({ name: "", email: "", role: "" });
       };
 
+
     return(
         <div>
             <h1>Team Forms</h1>
@@ -50,11 +51,13 @@ const TeamForms = (props) =>{
                     onChange={changeHandler}
                 />
                 <label htmlFor="role">Role</label>
-                <select>
-                    <option value="{newMember.role}">Frontend Designer</option>
-                    <option value="{newMember.role}">Backend Designer</option>
-                    <option value="{newMember.role}">Designer</option>
-                </select>
+                <input 
+                    type="text"
+                    name="role"
+                    placeholder="Frontend Designer"
+                    value={newMember.role}
+                    onChange={changeHandler}
+                />
                 <button type="submit">Enroll</button>
             </form>
         </div>
