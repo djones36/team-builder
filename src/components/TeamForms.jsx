@@ -7,7 +7,22 @@ const TeamForms = (props) =>{
         email: "",
         role: "",
     })
-    
+
+    const submitForm = event => {
+        //revent the default reload of a button click in a form
+        event.preventDefault();
+        //Create a new Obj, include all properties from newMember State and add an id to it.
+        const newTeamMember = {
+          ...NewMember,
+          id: uuid()
+        };
+        //Add the new team memember to state in app component
+        props.addNewTeamMember(newTeamMember);
+
+        //React state in TeamForm component
+        SetNewMember({ name: "", email: "", role: "" });
+      };
+
     return(
         <div>
             <h1>Team Forms</h1>

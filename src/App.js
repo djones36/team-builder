@@ -9,12 +9,16 @@ import data from './data'
 
 function App() {
 
-  
+  const [teamMembers, SetTeamMembers] = (data)
+
+  const addNewTeamMember = teamMember => {
+    SetTeamMembers([...teamMember, teamMember])
+  }
 
   return (
     <div className="App">
-     <TeamForms />
-     <Team />
+     <TeamForms addNewTeamMember={addNewTeamMember}/>
+     <Team data={teamMembers}/>
     </div>
   );
 }
