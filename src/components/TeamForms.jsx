@@ -1,12 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import uuid from 'uuid/v1';
 
+
 const TeamForms = (props) =>{
-    const [newMember, SetNewMember]= ({
+    const [newMember, SetNewMember]= useState({
         name: "",
         email: "",
         role: "",
-    })
+    });
     const changeHandler = event =>{
         console.log(event.target.value);
         SetNewMember({ ...newMember, [event.target.name]: event.target.value});
