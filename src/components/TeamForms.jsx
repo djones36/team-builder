@@ -44,7 +44,7 @@ const TeamForms = (props) =>{
 
                 <label htmlFor="email">Email: </label>
                 <input 
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder="email@email.com"
                     value={newMember.email}
